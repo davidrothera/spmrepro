@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,19 @@
 		6319C93123D47180007E4727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6319C93023D47180007E4727 /* Assets.xcassets */; };
 		6319C93423D47180007E4727 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6319C93323D47180007E4727 /* Preview Assets.xcassets */; };
 		6319C93723D47180007E4727 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6319C93523D47180007E4727 /* LaunchScreen.storyboard */; };
+		6319C94523D471A8007E4727 /* SPMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6319C94423D471A8007E4727 /* SPMUITests.swift */; };
+		6319C95723D493BD007E4727 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 6319C95623D493BD007E4727 /* FacebookCore */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6319C94723D471A8007E4727 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6319C91F23D4717E007E4727 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6319C92623D4717E007E4727;
+			remoteInfo = SPM;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6319C92723D4717E007E4727 /* SPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +36,21 @@
 		6319C93323D47180007E4727 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6319C93623D47180007E4727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6319C93823D47180007E4727 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6319C94223D471A8007E4727 /* SPMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SPMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6319C94423D471A8007E4727 /* SPMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPMUITests.swift; sourceTree = "<group>"; };
+		6319C94623D471A8007E4727 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6319C92423D4717E007E4727 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6319C95723D493BD007E4727 /* FacebookCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6319C93F23D471A8007E4727 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				6319C92923D4717E007E4727 /* SPM */,
+				6319C94323D471A8007E4727 /* SPMUITests */,
 				6319C92823D4717E007E4727 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				6319C92723D4717E007E4727 /* SPM.app */,
+				6319C94223D471A8007E4727 /* SPMUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,6 +100,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		6319C94323D471A8007E4727 /* SPMUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6319C94423D471A8007E4727 /* SPMUITests.swift */,
+				6319C94623D471A8007E4727 /* Info.plist */,
+			);
+			path = SPMUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,9 +125,30 @@
 			dependencies = (
 			);
 			name = SPM;
+			packageProductDependencies = (
+				6319C95623D493BD007E4727 /* FacebookCore */,
+			);
 			productName = SPM;
 			productReference = 6319C92723D4717E007E4727 /* SPM.app */;
 			productType = "com.apple.product-type.application";
+		};
+		6319C94123D471A8007E4727 /* SPMUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6319C94923D471A8007E4727 /* Build configuration list for PBXNativeTarget "SPMUITests" */;
+			buildPhases = (
+				6319C93E23D471A8007E4727 /* Sources */,
+				6319C93F23D471A8007E4727 /* Frameworks */,
+				6319C94023D471A8007E4727 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6319C94823D471A8007E4727 /* PBXTargetDependency */,
+			);
+			name = SPMUITests;
+			productName = SPMUITests;
+			productReference = 6319C94223D471A8007E4727 /* SPMUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -108,6 +163,10 @@
 					6319C92623D4717E007E4727 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
+					6319C94123D471A8007E4727 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 6319C92623D4717E007E4727;
+					};
 				};
 			};
 			buildConfigurationList = 6319C92223D4717E007E4727 /* Build configuration list for PBXProject "SPM" */;
@@ -119,11 +178,15 @@
 				Base,
 			);
 			mainGroup = 6319C91E23D4717E007E4727;
+			packageReferences = (
+				6319C95523D493BD007E4727 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = 6319C92823D4717E007E4727 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				6319C92623D4717E007E4727 /* SPM */,
+				6319C94123D471A8007E4727 /* SPMUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -136,6 +199,13 @@
 				6319C93723D47180007E4727 /* LaunchScreen.storyboard in Resources */,
 				6319C93423D47180007E4727 /* Preview Assets.xcassets in Resources */,
 				6319C93123D47180007E4727 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6319C94023D471A8007E4727 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +222,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6319C93E23D471A8007E4727 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6319C94523D471A8007E4727 /* SPMUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6319C94823D471A8007E4727 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6319C92623D4717E007E4727 /* SPM */;
+			targetProxy = 6319C94723D471A8007E4727 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6319C93523D47180007E4727 /* LaunchScreen.storyboard */ = {
@@ -320,6 +406,44 @@
 			};
 			name = Release;
 		};
+		6319C94A23D471A8007E4727 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YX97W249KL;
+				INFOPLIST_FILE = SPMUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.supratude.SPMUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SPM;
+			};
+			name = Debug;
+		};
+		6319C94B23D471A8007E4727 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YX97W249KL;
+				INFOPLIST_FILE = SPMUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.supratude.SPMUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SPM;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -341,7 +465,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		6319C94923D471A8007E4727 /* Build configuration list for PBXNativeTarget "SPMUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6319C94A23D471A8007E4727 /* Debug */,
+				6319C94B23D471A8007E4727 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6319C95523D493BD007E4727 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.14.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6319C95623D493BD007E4727 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6319C95523D493BD007E4727 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6319C91F23D4717E007E4727 /* Project object */;
 }
